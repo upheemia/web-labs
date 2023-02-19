@@ -1,10 +1,11 @@
 import React from 'react';
+import { ListItem } from '../ListItem/ListItem';
 import './List.css';
 
 export const List = ({ data }) => {
   const renderList = () => {
     return data.map(item => (
-      <div key={item.id}>{item.content}</div>
+      <ListItem key={item.id}>{item.content}</ListItem>
     ))
   };
 

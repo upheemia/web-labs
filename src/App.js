@@ -16,7 +16,7 @@ function App() {
   const [data, setData] = useState(initialData)
   
   useEffect(() => {
-    const filteredData = initialData.filter(item => item.content.includes(searchValue));
+    const filteredData = initialData.filter(item => item.content.toLowerCase().includes(searchValue.toLowerCase()));
     setData(filteredData)
 
     if (!searchValue.length) {
